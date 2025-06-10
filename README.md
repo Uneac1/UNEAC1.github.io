@@ -12,4 +12,4 @@
 
 
 网站中包含的Guli等图片IP元素逐步更换中
-![heo](https://zhheo.com/)
+[heo](https://zhheo.com/)
