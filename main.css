@@ -524,7 +524,7 @@ a.primary-button {
 }
 
 a.primary-button:hover {
-  background: var(--heo-black);
+  background: var(--heo-white);
   color: var(--heo-white);
 }
 
