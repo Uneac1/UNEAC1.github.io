@@ -1,909 +1,909 @@
-@charset  "UTF-8";
+@charset  "UTF-8";  /* 设置字符集为 UTF-8 */
 
-:root{
-  --heo-white: #fff;
-  --heo-white-op: rgba(255,255,255,0.2);
-  --heo-black: #000;
-  --heo-black-op: rgba(0,0,0,0.2);
-  --heo-none: #00001e00;
-  --heo-gray: #999999;
-  --heo-gray-op: #9999992b;
-  --heo-vip: #e5a80d;
-  --heo-main: var(--heo-theme);
-  --heo-main-op: var(--heo-theme-op);
-  --heo-main-none: var(--heo-theme-none);
-  --heo-shadow-theme: 0 8px 12px -3px var(--heo-theme-op);
-  --heo-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0,.15);
-  --heo-shadow-main: 0 8px 12px -3px var(--heo-main-op);
-  --heo-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234,.20);
-  --heo-shadow-white: 0 8px 12px -3px rgba(255, 255, 255,.20);
-  --heo-shadow-black: 0 0 12px 4px rgba(0, 0, 0,.05);
-  --heo-shadow-yellow: 0px 38px 77px -26px rgba(255, 201, 62,.12);
-  --heo-shadow-red: 0 8px 12px -3px #ee7d7936;
-  --heo-shadow-green: 0 8px 12px -3px #87ee7936;
-  --heo-logo-color: linear-gradient(215deg,#4584ff 0%,#cf0db9 100%);
-  --heo-snackbar-time: 5s;
-  --style-border: 1px solid var(--heo-card-border);
-  --style-border-always: 1px solid var(--heo-card-border);
-  --style-border-hover: 1px solid var(--heo-main);
-  --style-border-hover-always: 1px solid var(--heo-main);
-  --style-border-dashed: 1px dashed var(--heo-theme-op);
+:root {
+  --heo-white: #fff;  /* 白色 */
+  --heo-white-op: rgba(255,255,255,0.2);  /* 半透明白色 */
+  --heo-black: #000;  /* 黑色 */
+  --heo-black-op: rgba(0,0,0,0.2);  /* 半透明黑色 */
+  --heo-none: #00001e00;  /* 完全透明 */
+  --heo-gray: #999999;  /* 灰色 */
+  --heo-gray-op: #9999992b;  /* 半透明灰色 */
+  --heo-vip: #e5a80d;  /* VIP颜色 */
+  --heo-main: var(--heo-theme);  /* 主色调 */
+  --heo-main-op: var(--heo-theme-op);  /* 主色调半透明 */
+  --heo-main-none: var(--heo-theme-none);  /* 主色调透明 */
+  --heo-shadow-theme: 0 8px 12px -3px var(--heo-theme-op);  /* 主题阴影 */
+  --heo-shadow-blackdeep: 0 2px 16px -3px rgba(0, 0, 0,.15);  /* 深黑阴影 */
+  --heo-shadow-main: 0 8px 12px -3px var(--heo-main-op);  /* 主色阴影 */
+  --heo-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234,.20);  /* 蓝色阴影 */
+  --heo-shadow-white: 0 8px 12px -3px rgba(255, 255, 255,.20);  /* 白色阴影 */
+  --heo-shadow-black: 0 0 12px 4px rgba(0, 0, 0,.05);  /* 黑色阴影 */
+  --heo-shadow-yellow: 0px 38px 77px -26px rgba(255, 201, 62,.12);  /* 黄色阴影 */
+  --heo-shadow-red: 0 8px 12px -3px #ee7d7936;  /* 红色阴影 */
+  --heo-shadow-green: 0 8px 12px -3px #87ee7936;  /* 绿色阴影 */
+  --heo-logo-color: linear-gradient(215deg,#4584ff 0%,#cf0db9 100%);  /* logo渐变色 */
+  --heo-snackbar-time: 5s;  /* 小提示显示时间 */
+  --style-border: 1px solid var(--heo-card-border);  /* 边框样式 */
+  --style-border-always: 1px solid var(--heo-card-border);  /* 固定边框样式 */
+  --style-border-hover: 1px solid var(--heo-main);  /* 悬停时边框样式 */
+  --style-border-hover-always: 1px solid var(--heo-main);  /* 悬停时固定边框样式 */
+  --style-border-dashed: 1px dashed var(--heo-theme-op);  /* 虚线边框 */
 }
 
 ::selection {
-  background: var(--heo-fontcolor);
-  color: var(--heo-background);
+  background: var(--heo-fontcolor);  /* 选中文本背景颜色 */
+  color: var(--heo-background);  /* 选中文本颜色 */
 }
 
 :root {
-  --heo-theme: #4375ff;
-  --heo-theme-op: #4375ff23;
-  --heo-theme-op-deep: #4375ffdd;
-  --heo-theme-none: #4375ff01;
-  --heo-blue: #3478f5;
-  --heo-red: #D8213C;
-  --heo-pink: #FF7C7C;
-  --heo-green: #28a63f;
-  --heo-yellow: #c28b00;
-  --heo-yellow-op: #d99c001a;
-  --heo-orange: #ffc635;
-  --heo-fontcolor: #00001e;
-  --heo-background: #F5F5F7;
-  --heo-navbg: rgba(22, 22, 23, 0.91);
-  --heo-reverse: #000;
-  --heo-maskbg: rgba(255, 255, 255, 0.6);
-  --heo-maskbgdeep: rgba(255, 255, 255, 0.85);
-  --heo-hovertext: var(--heo-main);
-  --heo-ahoverbg: #F7F7FA;
-  --heo-lighttext: var(--heo-main);
-  --heo-secondtext: rgba(60, 60, 67, 0.6);
-  --heo-scrollbar: rgba(60, 60, 67, 0.4);
-  --heo-card-btn-bg: #1C1C1F;
-  --heo-post-blockquote-bg: #fafcff;
-  --heo-post-tabs-bg: #f2f5f8;
-  --heo-secondbg: #eaeaea;
-  --heo-shadow-nav:0 5px 12px -5px rgba(102, 68, 68, 0.05);
-  --heo-card-bg: #fff;
-  --heo-card-bg-op: var(--heo-black-op);
-  --heo-card-bg-none: rgba(255, 255, 255, 0);
-  --heo-shadow-lightblack:0 5px 12px -5px rgba(102, 68, 68, 0.00);
-  --heo-shadow-light2black:0 5px 12px -5px rgba(102, 68, 68, 0.00);
-  --heo-card-border: #e3e8f7;
-  --heo-shadow-border: 0 8px 16px -4px #2c2d300c;
-  --style-border-forever: 2px solid var(--heo-main);
+  --heo-theme: #4375ff;  /* 主题色 */
+  --heo-theme-op: #4375ff23;  /* 主题色半透明 */
+  --heo-theme-op-deep: #4375ffdd;  /* 主题色深色透明 */
+  --heo-theme-none: #4375ff01;  /* 主题色完全透明 */
+  --heo-blue: #3478f5;  /* 蓝色 */
+  --heo-red: #D8213C;  /* 红色 */
+  --heo-pink: #FF7C7C;  /* 粉色 */
+  --heo-green: #28a63f;  /* 绿色 */
+  --heo-yellow: #c28b00;  /* 黄色 */
+  --heo-yellow-op: #d99c001a;  /* 半透明黄色 */
+  --heo-orange: #ffc635;  /* 橙色 */
+  --heo-fontcolor: #00001e;  /* 字体颜色 */
+  --heo-background: #F5F5F7;  /* 背景颜色 */
+  --heo-navbg: rgba(255, 255, 255, 0.91);  /* 导航背景色 */
+  --heo-reverse: #000;  /* 反向颜色 */
+  --heo-maskbg: rgba(255, 255, 255, 0.6);  /* 蒙版背景色 */
+  --heo-maskbgdeep: rgba(255, 255, 255, 0.85);  /* 深色蒙版背景 */
+  --heo-hovertext: var(--heo-main);  /* 悬停文本颜色 */
+  --heo-ahoverbg: #F7F7FA;  /* 悬停背景色 */
+  --heo-lighttext: var(--heo-main);  /* 轻文本颜色 */
+  --heo-secondtext: rgba(60, 60, 67, 0.6);  /* 第二文本颜色 */
+  --heo-scrollbar: rgba(60, 60, 67, 0.4);  /* 滚动条颜色 */
+  --heo-card-btn-bg: #1C1C1F;  /* 卡片按钮背景色 */
+  --heo-post-blockquote-bg: #fafcff;  /* 引用块背景色 */
+  --heo-post-tabs-bg: #f2f5f8;  /* 标签页背景色 */
+  --heo-secondbg: #eaeaea;  /* 第二背景色 */
+  --heo-shadow-nav: 0 5px 12px -5px rgba(102, 68, 68, 0.05);  /* 导航阴影 */
+  --heo-card-bg: #fff;  /* 卡片背景色 */
+  --heo-card-bg-op: var(--heo-black-op);  /* 卡片背景半透明 */
+  --heo-card-bg-none: rgba(255, 255, 255, 0);  /* 卡片背景透明 */
+  --heo-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0.00);  /* 轻黑阴影 */
+  --heo-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0.00);  /* 另一个轻黑阴影 */
+  --heo-card-border: #e3e8f7;  /* 卡片边框颜色 */
+  --heo-shadow-border: 0 8px 16px -4px #2c2d300c;  /* 边框阴影 */
+  --style-border-forever: 2px solid var(--heo-main);  /* 固定边框样式 */
 }
 
 @keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 10px); }
-  100%   { transform: translate(0, 0px); }   
+  0% { transform: translate(0,  0px); }  /* 初始状态 */
+  50%  { transform: translate(0, 10px); }  /* 向下浮动 */
+  100%   { transform: translate(0, 0px); }   /* 恢复原位 */
 }
 
 @keyframes showbanner {
   0% {
     top: 0px;
-    background: var(--heo-theme);
+    background: var(--heo-theme);  /* 初始背景色 */
   }
   30% {
-    top: 40px;
+    top: 40px;  /* 顶部位置上移 */
   }
   80% {
-    background: var(--heo-theme);
+    background: var(--heo-theme);  /* 恢复主题色背景 */
   }
   100% {
-    background: var(--heo-secondbg);
+    background: var(--heo-secondbg);  /* 最终背景色 */
   }
 }
 
 @keyframes showbannertext {
   0% {
-    color: var(--heo-white);
+    color: var(--heo-white);  /* 初始文字颜色 */
   }
   30% {
-    
+    /* 动画中间阶段，无变化 */
   }
   80% {
-    color: var(--heo-white);
+    color: var(--heo-white);  /* 恢复文字颜色 */
   }
   100% {
-    color: var(--heo-fontcolor);
+    color: var(--heo-fontcolor);  /* 最终文字颜色 */
   }
 }
 
 body {
-  background: var(--heo-background);
-  display: flex;
-  margin: auto;
-  flex-direction: column;
-  font-family: PingFangSC-Regular, Roboto, Helvetica Neue, Helvetica, Tahoma,
-    Arial, PingFang SC-Light, Microsoft YaHei;
-  align-items: center;
+  background: var(--heo-background);  /* 背景颜色 */
+  display: flex;  /* 使用flex布局 */
+  margin: auto;  /* 设置自动边距 */
+  flex-direction: column;  /* 垂直方向布局 */
+  font-family: PingFangSC-Regular, Roboto, Helvetica Neue, Helvetica, Tahoma, 
+  Arial, PingFang SC-Light, Microsoft YaHei;  /* 字体 */
+  align-items: center;  /* 居中对齐 */
+
 }
 
 body .need-padding {
-  max-width: 1200px;
-  width: 90%;
+  max-width: 1200px;  /* 最大宽度 */
+  width: 90%;  /* 宽度为90% */
 }
 
 a {
-  text-decoration:none;
-  user-select:none;
-  -webkit-user-drag: none;
+  text-decoration: none;  /* 去掉文本装饰 */
+  user-select: none;  /* 禁止文本选择 */
+  -webkit-user-drag: none;  /* 禁止图片拖动 */
 }
 
 span {
-  user-select:none;
+  user-select: none;  /* 禁止文本选择 */
 }
 
 sup {
-  font-size: 12px;
-  background: var(--heo-green);
-  color: var(--heo-white);
-  padding: 4px;
-  border-radius: 4px;
-  margin-left: 6px;
-  white-space: nowrap;
-  position: absolute;
-  top: -4px;
+  font-size: 12px;  /* 上标字体大小 */
+  background: var(--heo-green);  /* 上标背景色 */
+  color: var(--heo-white);  /* 上标字体颜色 */
+  padding: 4px;  /* 上标内边距 */
+  border-radius: 4px;  /* 上标圆角 */
+  margin-left: 6px;  /* 左边距 */
+  white-space: nowrap;  /* 不换行 */
+  position: absolute;  /* 绝对定位 */
+  top: -4px;  /* 顶部位置 */
 }
 
 sup.hot {
-  background: var(--heo-red);
+  background: var(--heo-red);  /* 热点上标的背景色 */
 }
 
 img {
-  user-select:none;
-  -webkit-user-drag: none;
+  user-select: none;  /* 禁止图片选择 */
+  -webkit-user-drag: none;  /* 禁止图片拖动 */
 }
 
 .nav {
-  display: flex;
-  width: 100%;
-  left: 0;
-  position: fixed;
-  justify-content: center;
-  flex-direction: column;
-  background: var(--heo-navbg);
-  align-items: center;
-  z-index: 2;
-  transition: ease-in-out 0.3s;
-  backdrop-filter: blur(10px); /* 调整模糊效果的值 */
+  display: flex;  /* 使用flex布局 */
+  width: 100%;  /* 宽度100% */
+  left: 0;  /* 左边距0 */
+  position: fixed;  /* 固定定位 */
+  justify-content: center;  /* 水平居中 */
+  flex-direction: column;  /* 垂直布局 */
+  background: var(--heo-navbg);  /* 导航栏背景色 */
+  align-items: center;  /* 垂直居中 */
+  z-index: 2;  /* 设置堆叠顺序 */
+  transition: ease-in-out 0.3s;  /* 过渡效果 */
+  backdrop-filter: blur(10px);  /* 调整模糊效果的值 */
 }
 
 .nav-content {
-  max-width: 1200px;
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  z-index: 2;
-  transition: ease-in-out 0.3s;
+  max-width: 1200px;  /* 最大宽度 */
+  width: 90%;  /* 宽度为90% */
+  display: flex;  /* 使用flex布局 */
+  justify-content: space-between;  /* 项目之间均匀分布 */
+  align-items: center;  /* 垂直居中 */
+  height: 60px;  /* 高度 */
+  z-index: 2;  /* 设置堆叠顺序 */
+  transition: ease-in-out 0.3s;  /* 过渡效果 */
 }
 
 .nav-banner {
-  width: 100%;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 44px;
-  left: 0;
-  animation: showbanner 4s ease-in-out;
-  z-index: 1;
-  background: var(--heo-secondbg);
-  
+  width: 100%;  /* 宽度100% */
+  height: 44px;  /* 高度44px */
+  display: flex;  /* 使用flex布局 */
+  align-items: center;  /* 垂直居中 */
+  justify-content: center;  /* 水平居中 */
+  position: absolute;  /* 绝对定位 */
+  top: 44px;  /* 距离顶部44px */
+  left: 0;  /* 左边距0 */
+  animation: showbanner 4s ease-in-out;  /* banner动画 */
+  z-index: 1;  /* 设置堆叠顺序 */
+  background: var(--heo-secondbg);  /* 背景颜色 */
 }
 
 .nav-banner a{
-  font-size: 12px;
-  transition: ease-in-out 0.3s;
-  animation: showbannertext 4s ease-in-out;
-  color: var(--heo-fontcolor);
+  font-size: 12px;  /* 字体大小 */
+  transition: ease-in-out 0.3s;  /* 过渡效果 */
+  animation: showbannertext 4s ease-in-out;  /* banner文字动画 */
+  color: var(--heo-fontcolor);  /* 文字颜色 */
 }
 
 .nav-banner a:hover {
-  color: var(--heo-main);
+  color: var(--heo-main);  /* 悬停时文字颜色 */
 }
 
 .nav-right .nav-menu {
-  display: none;
+  display: none;  /* 隐藏菜单 */
 }
 
 a.site-logo {
-  display: flex;
-  align-items: center;
+  display: flex;  /* 使用flex布局 */
+  align-items: center;  /* 垂直居中 */
 }
 
 img.site-logo-img {
-  width: 25px;
+  width: 25px;  /* logo图片宽度 */
 }
 
 .menu-list {
-  display: none;
+  display: none;  /* 隐藏菜单列表 */
 }
 
 .banner-img {
-  width: 405px;
-  max-width: 100%;
-  animation: floating 4s ease-in-out infinite;
-  pointer-events:none;
-  object-fit:cover;
-  transform: translate(0,  -7px);
+  width: 405px;  /* 图片宽度 */
+  max-width: 100%;  /* 最大宽度100% */
+  animation: floating 4s ease-in-out infinite;  /* 浮动动画 */
+  pointer-events: none;  /* 禁止点击 */
+  object-fit: cover;  /* 图片填充方式 */
+  transform: translate(0, -7px);  /* 初始位置调整 */
 }
 
 span.site-name {
-  color: var(--heo-white);
-  font-size: 14px;
-  margin-left: 8px;
+  color: var(--heo-white);  /* 网站名颜色 */
+  font-size: 14px;  /* 字体大小 */
+  margin-left: 8px;  /* 左边距 */
 }
 
 a.nav-item {
-  color: var(--heo-white);
-  opacity: 0.8;
-  transition: ease-in-out 0.3s;
-  font-size: 14px;
-  margin: 0 2px;
-  padding: 4px 8px;
-  border-radius: 16px;
+  color: var(--heo-white);  /* 导航项文字颜色 */
+  opacity: 0.8;  /* 初始透明度 */
+  transition: ease-in-out 0.3s;  /* 过渡效果 */
+  font-size: 14px;  /* 字体大小 */
+  margin: 0 2px;  /* 外边距 */
+  padding: 4px 8px;  /* 内边距 */
+  border-radius: 16px;  /* 圆角 */
 }
 
 a.nav-item:hover {
-  opacity: 1;
-  background: var(--heo-card-bg);
-  color: var(--heo-fontcolor);
+  opacity: 1;  /* 悬停时透明度 */
+  background: var(--heo-card-bg);  /* 悬停时背景色 */
+  color: var(--heo-fontcolor);  /* 悬停时文字颜色 */
 }
 
 .nav-right {
-  display: flex;
-  align-items: center;
+  display: flex;  /* 使用flex布局 */
+  align-items: center;  /* 垂直居中 */
 }
 
+
 .first-stack {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 180px;
-  margin-bottom: 120px;
-  align-items: center;
+  display: flex;  /* 使用flex布局 */
+  justify-content: space-between;  /* 子元素水平两端对齐 */
+  margin-top: 180px;  /* 上边距180px */
+  margin-bottom: 120px;  /* 下边距120px */
+  align-items: center;  /* 子元素垂直居中 */
 }
 
 .title-group {
-  display: flex;
-  flex-direction: column;
-  font-size: 70px;
-  font-weight: 400;
-  color: #00001e;
-  line-height: 75px;
-  font-weight: bold;
-  font-family: system-ui;
+  display: flex;  /* 使用flex布局 */
+  flex-direction: column;  /* 垂直排列子元素 */
+  font-size: 70px;  /* 字体大小70px */
+  font-weight: 400;  /* 字体粗细400 */
+  color: #00001e;  /* 字体颜色为深色 */
+  line-height: 75px;  /* 行高75px */
+  font-weight: bold;  /* 字体加粗 */
+  font-family: system-ui;  /* 字体使用系统默认字体 */
 }
 
 span.discription-text {
-  display: block;
-  font-size: 28px;
-  font-weight: 400;
-  color: #00001e;
-  line-height: 34px;
-  margin-top: 28px;
-  font-weight: bold;
+  display: block;  /* 显示为块级元素 */
+  font-size: 28px;  /* 字体大小28px */
+  font-weight: 400;  /* 字体粗细400 */
+  color: #00001e;  /* 字体颜色为深色 */
+  line-height: 34px;  /* 行高34px */
+  margin-top: 28px;  /* 上边距28px */
+  font-weight: bold;  /* 字体加粗 */
 }
 
 a.about-button {
-  display: flex;
-  padding: 0 36px;
-  background: var(--heo-card-btn-bg);
-  color: var(--heo-white);
-  border-radius: 29px;
-  box-shadow: 0px 12px 12px -9px rgba(0,0,0,0.29);
-  margin-top: 64px;
-  width: fit-content;
-  transition: ease-in-out 0.3s;
-  white-space: nowrap;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
+  display: flex;  /* 使用flex布局 */
+  padding: 0 36px;  /* 左右内边距36px */
+  background: var(--heo-card-btn-bg);  /* 背景颜色使用--heo-card-btn-bg */
+  color: var(--heo-white);  /* 字体颜色使用--heo-white */
+  border-radius: 29px;  /* 边框圆角29px */
+  box-shadow: 0px 12px 12px -9px rgba(0,0,0,0.29);  /* 阴影效果 */
+  margin-top: 64px;  /* 上边距64px */
+  width: fit-content;  /* 宽度根据内容调整 */
+  transition: ease-in-out 0.3s;  /* 添加过渡效果 */
+  white-space: nowrap;  /* 不换行 */
+  align-items: center;  /* 垂直居中 */
+  justify-content: center;  /* 水平居中 */
+  height: 48px;  /* 高度48px */
 }
 
 a.about-button:hover {
-  background: var(--heo-main);
-  box-shadow: 0px 12px 12px -9px rgba(5, 51, 137, 0.29);
+  background: var(--heo-main);  /* 悬停时背景颜色变为--heo-main */
+  box-shadow: 0px 12px 12px -9px rgba(5, 51, 137, 0.29);  /* 悬停时阴影效果 */
 }
 
 .product-group {
-  margin: 0;
-  width: 100%;
+  margin: 0;  /* 去除外边距 */
+  width: 100%;  /* 宽度为100% */
 }
 
 h2.group-title {
-  font-size: 32px;
-  margin-bottom: 0;
+  font-size: 32px;  /* 字体大小32px */
+  margin-bottom: 0;  /* 去除下边距 */
 }
 
 .group-description {
-  font-size: 14px;
-  color: var(--heo-secondtext);
+  font-size: 14px;  /* 字体大小14px */
+  color: var(--heo-secondtext);  /* 字体颜色为--heo-secondtext */
 }
 
 .group-items {
-  display: flex;
-  margin-top: 60px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  
+  display: flex;  /* 使用flex布局 */
+  margin-top: 60px;  /* 上边距60px */
+  flex-direction: row;  /* 横向排列子元素 */
+  flex-wrap: wrap;  /* 换行排列 */
 }
 
 .group-item {
-  display: flex;
-  width: calc(100% / 3);
-  margin-bottom: 60px;
+  display: flex;  /* 使用flex布局 */
+  width: calc(100% / 3);  /* 每个子项宽度为父元素的三分之一 */
+  margin-bottom: 60px;  /* 下边距60px */
 }
 
 a.group-item-icon {
-  width: 100px;
-  height: 100px;
+  width: 100px;  /* 宽度100px */
+  height: 100px;  /* 高度100px */
 }
 
 img.group-item-icon-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 28px;
+  width: 100px;  /* 宽度100px */
+  height: 100px;  /* 高度100px */
+  border-radius: 28px;  /* 圆角半径28px */
 }
 
 .group-info-button {
-  display: flex;
-  align-items: center;
+  display: flex;  /* 使用flex布局 */
+  align-items: center;  /* 垂直居中对齐 */
 }
 
 span.linkbotton-tips {
-  display: flex;
-  margin-left: 10px;
-  font-size: 12px;
-  color: var(--heo-secondtext);
+  display: flex;  /* 使用flex布局 */
+  margin-left: 10px;  /* 左边距10px */
+  font-size: 12px;  /* 字体大小12px */
+  color: var(--heo-secondtext);  /* 字体颜色为--heo-secondtext */
 }
 
 .special-card span.linkbotton-tips {
-  color: var(--heo-white);
+  color: var(--heo-white);  /* 特殊卡片中的链接按钮提示字体颜色为--heo-white */
 }
 
 .group-info {
-  display: flex;
-  flex-direction: column;
+  display: flex;  /* 使用flex布局 */
+  flex-direction: column;  /* 垂直排列子元素 */
 }
 
 .group-info-group {
-  margin-left: 36px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100px;
+  margin-left: 36px;  /* 左边距36px */
+  display: flex;  /* 使用flex布局 */
+  flex-direction: column;  /* 垂直排列子元素 */
+  justify-content: space-between;  /* 子元素在垂直方向上均匀分布 */
+  height: 100px;  /* 高度100px */
 }
 
 .group-info-group a.title {
-  color: var(--heo-fontcolor);
-  font-size: 20px;
-  line-height: 1;
-  margin-bottom: 8px;
-  width: fit-content;
-  position: relative;
-  font-weight: bold;
+  color: var(--heo-fontcolor);  /* 字体颜色为--heo-fontcolor */
+  font-size: 20px;  /* 字体大小20px */
+  line-height: 1;  /* 行高为1 */
+  margin-bottom: 8px;  /* 下边距8px */
+  width: fit-content;  /* 宽度根据内容调整 */
+  position: relative;  /* 相对定位 */
+  font-weight: bold;  /* 字体加粗 */
 }
 
 .group-info-group a.discription {
-  color: var(--heo-fontcolor);
-  font-size: 14px;
-  width: fit-content;
-  max-width: 220px;
-  word-break: break-all;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1; /* 这里是超出几行省略 */
-  overflow: hidden;
+  color: var(--heo-fontcolor);  /* 设置字体颜色 */
+  font-size: 14px;  /* 设置字体大小为14px */
+  width: fit-content;  /* 宽度根据内容调整 */
+  max-width: 220px;  /* 最大宽度为220px */
+  word-break: break-all;  /* 强制单词换行 */
+  text-overflow: ellipsis;  /* 超出部分显示省略号 */
+  display: -webkit-box;  /* 使用webkit的flex布局 */
+  -webkit-box-orient: vertical;  /* 设置盒子方向为垂直 */
+  -webkit-line-clamp: 1;  /* 这里是超出几行省略 */
+  overflow: hidden;  /* 隐藏超出部分 */
 }
 
 a.linkbutton {
-  padding: 6px 20px;
-  display: flex;
-  background: var(--heo-blue);
-  color: var(--heo-white);
-  font-size: 14px;
-  border-radius: 21px;
-  transition: ease-in-out 0.3s;
-  width: fit-content;
-  white-space: nowrap;
+  padding: 6px 20px;  /* 设置内边距 */
+  display: flex;  /* 使用flex布局 */
+  background: var(--heo-blue);  /* 设置背景颜色为--heo-blue */
+  color: var(--heo-white);  /* 设置字体颜色为--heo-white */
+  font-size: 14px;  /* 设置字体大小为14px */
+  border-radius: 21px;  /* 设置圆角半径为21px */
+  transition: ease-in-out 0.3s;  /* 添加过渡效果 */
+  width: fit-content;  /* 宽度根据内容调整 */
+  white-space: nowrap;  /* 不换行 */
 }
 
 a.linkbutton:hover {
-  filter: brightness(1.2);
+  filter: brightness(1.2);  /* 悬停时增加亮度 */
 }
 
 a.linkbutton:active {
-  filter: brightness(0.8);
+  filter: brightness(0.8);  /* 激活时减少亮度 */
 }
 
 .footer {
-  padding: 60px 0 60px 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background: var(--heo-secondbg);
-  margin-top: 80px;
-  align-items: center;
+  padding: 60px 0 60px 0;  /* 设置上下内边距为60px */
+  display: flex;  /* 使用flex布局 */
+  justify-content: center;  /* 水平居中对齐 */
+  width: 100%;  /* 设置宽度为100% */
+  background: var(--heo-secondbg);  /* 设置背景颜色为--heo-secondbg */
+  margin-top: 80px;  /* 设置上边距为80px */
+  align-items: center;  /* 垂直居中对齐 */
 }
 
 .footer .info {
-  font-size: 12px;
-  margin: 0 20px;
-  opacity: 0.6;
-  color: var(--heo-fontcolor);
-  transition: ease-in-out 0.3s;
-  margin: 4px 0;
+  font-size: 12px;  /* 设置字体大小为12px */
+  margin: 0 20px;  /* 设置左右外边距为20px */
+  opacity: 0.6;  /* 设置透明度为0.6 */
+  color: var(--heo-fontcolor);  /* 设置字体颜色为--heo-fontcolor */
+  transition: ease-in-out 0.3s;  /* 添加过渡效果 */
+  margin: 4px 0;  /* 设置上下外边距为4px */
 }
 
 .footer a.info:hover {
-  opacity: 1;
+  opacity: 1;  /* 悬停时透明度为1 */
 }
 
 .footer .info-group .info:not(:first-child) {
-  margin-left: 4px;
+  margin-left: 4px;  /* 非第一个元素的左边距为4px */
 }
 
 .footer-content {
-  display: flex;
-  flex-direction: column;
+  display: flex;  /* 使用flex布局 */
+  flex-direction: column;  /* 设置为垂直排列 */
 }
 
 /* banner */
 
 .product-banner {
-  background-image: linear-gradient(180deg, #02162A 0%, #00001e 100%);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 94px 0 0 0;
-  height: fit-content;
-  margin: 40px 0;
-  overflow: hidden;
-  position: relative;
-  min-height: 800px;
+  background-image: linear-gradient(180deg, #02162A 0%, #00001e 100%);  /* 设置背景渐变色 */
+  width: 100%;  /* 设置宽度为100% */
+  display: flex;  /* 使用flex布局 */
+  flex-direction: column;  /* 设置为垂直排列 */
+  align-items: center;  /* 水平居中对齐 */
+  padding: 94px 0 0 0;  /* 设置上内边距为94px */
+  height: fit-content;  /* 高度根据内容调整 */
+  margin: 40px 0;  /* 设置上下外边距为40px */
+  overflow: hidden;  /* 隐藏溢出的部分 */
+  position: relative;  /* 设置为相对定位 */
+  min-height: 800px;  /* 设置最小高度为800px */
 }
 
 .banner-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex;  /* 使用flex布局 */
+  flex-direction: column;  /* 设置为垂直排列 */
+  align-items: center;  /* 水平居中对齐 */
 }
 
 .product-banner .tips {
-  color: var(--heo-vip);
-  font-size: 14px;
+  color: var(--heo-vip);  /* 设置字体颜色为--heo-vip */
+  font-size: 14px;  /* 设置字体大小为14px */
 }
 
 .product-banner span.title {
-  font-size: 56px;
-  color: var(--heo-white);
-  font-weight: bold;
-  text-align: center;
-  line-height: 60px;
-  margin-top: 12px;
+  font-size: 56px;  /* 设置字体大小为56px */
+  color: var(--heo-white);  /* 设置字体颜色为--heo-white */
+  font-weight: bold;  /* 字体加粗 */
+  text-align: center;  /* 设置文本居中 */
+  line-height: 60px;  /* 设置行高为60px */
+  margin-top: 12px;  /* 设置上边距为12px */
 }
 
 span.punctuation {
-  position: absolute;
+  position: absolute;  /* 设置为绝对定位 */
 }
 
 .banner-discription-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0.8;
-  margin: 24px 0 32px 0;
+  display: flex;  /* 使用flex布局 */
+  flex-direction: column;  /* 设置为垂直排列 */
+  align-items: center;  /* 水平居中对齐 */
+  opacity: 0.8;  /* 设置透明度为0.8 */
+  margin: 24px 0 32px 0;  /* 设置上下外边距为24px和32px */
 }
 
 .product-banner span.description {
-  font-size: 16px;
-  color: var(--heo-white);
-  text-align: center;
+  font-size: 16px;  /* 设置字体大小为16px */
+  color: var(--heo-white);  /* 设置字体颜色为--heo-white */
+  text-align: center;  /* 设置文本居中 */
 }
 
 .link-group {
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
+  margin-bottom: 24px;  /* 设置下边距为24px */
+  display: flex;  /* 使用flex布局 */
+  align-items: center;  /* 垂直居中对齐 */
 }
 
 a.primary-button {
-  padding: 8px 26px;
-  background: var(--heo-white);
-  color: var(--heo-fontcolor);
-  border-radius: 26px;
-  transition: ease-in-out 0.3s;
-  white-space: nowrap;
+  padding: 8px 26px; /* 设置按钮的内边距 */
+  background: var(--heo-white); /* 设置按钮的背景颜色 */
+  color: var(--heo-fontcolor); /* 设置按钮的字体颜色 */
+  border-radius: 26px; /* 设置按钮的圆角 */
+  transition: ease-in-out 0.3s; /* 设置过渡效果 */
+  white-space: nowrap; /* 防止文字换行 */
 }
 
 a.primary-button:hover {
-  background: var(--heo-white);
-  color: var(--heo-white);
+  background: var(--heo-black); /* 鼠标悬停时背景颜色 */
+  color: var(--heo-white); /* 鼠标悬停时字体颜色 */
 }
 
 a.second-link {
-  color: var(--heo-white);
-  opacity: 0.6;
-  font-size: 14px;
-  margin-left: 12px;
-  transition: ease-in-out 0.3s;
+  color: var(--heo-white); /* 设置链接的字体颜色 */
+  opacity: 0.6; /* 设置链接的透明度 */
+  font-size: 14px; /* 设置链接的字体大小 */
+  margin-left: 12px; /* 设置左边距 */
+  transition: ease-in-out 0.3s; /* 设置过渡效果 */
 }
 
 a.second-link:hover {
-  opacity: 1;
+  opacity: 1; /* 鼠标悬停时透明度变为1 */
 }
 
 .banner-pic {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  height: 400px;
-  position: absolute;
-  bottom: 100px;
+  margin-top: 20px; /* 设置顶部外边距 */
+  display: flex; /* 使用弹性布局 */
+  justify-content: center; /* 水平居中 */
+  height: 400px; /* 设置高度 */
+  position: absolute; /* 设置为绝对定位 */
+  bottom: 100px; /* 设置底部位置 */
 }
 
 .banner-pic-img {
-  max-width: 968px;
-  width: 100%;
-  margin: auto;
+  max-width: 968px; /* 设置最大宽度 */
+  width: 100%; /* 设置宽度为100% */
+  margin: auto; /* 水平居中 */
 }
 
 .inline-word {
-  word-break: keep-all;
-  white-space: nowrap;
+  word-break: keep-all; /* 保持单词不换行 */
+  white-space: nowrap; /* 防止换行 */
 }
 
 .first-stack-links {
-  display: flex;
+  display: flex; /* 使用弹性布局 */
 }
 
 .about-button.social-button {
-  margin-left: 8px;
-  padding: 0 16px;
+  margin-left: 8px; /* 设置左边距 */
+  padding: 0 16px; /* 设置内边距 */
 }
 
 .about-button.social-button i {
-  font-size: 20px;
-  line-height: 1;
+  font-size: 20px; /* 设置图标的字体大小 */
+  line-height: 1; /* 设置行高 */
 }
 
 .special-card {
-  background: #131202;
-  width: 90%;
-  border-radius: 30px;
-  max-width: 1200px;
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  height: 500px;
+  background: #131202; /* 设置背景色 */
+  width: 90%; /* 设置宽度 */
+  border-radius: 30px; /* 设置圆角 */
+  max-width: 1200px; /* 设置最大宽度 */
+  position: relative; /* 设置为相对定位 */
+  display: flex; /* 使用弹性布局 */
+  overflow: hidden; /* 隐藏溢出的内容 */
+  height: 500px; /* 设置高度 */
 }
 
 .special-card-left {
-  padding: 54px 0 54px 75px;
-  z-index: 1;
-  width: 100%;
-  position: relative;
+  padding: 54px 0 54px 75px; /* 设置内边距 */
+  z-index: 1; /* 设置z-index */
+  width: 100%; /* 设置宽度为100% */
+  position: relative; /* 设置为相对定位 */
 }
 
 .special-card-left .tips {
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--heo-white);
+  font-size: 18px; /* 设置字体大小 */
+  font-weight: bold; /* 设置字体加粗 */
+  color: var(--heo-white); /* 设置字体颜色 */
 }
 
 .special-card-left .title {
-  font-size: 40px;
-  font-weight: bold;
-  max-width: 400px;
-  line-height: 1.2;
-  margin-top: 8px;
-  max-width: calc(100% - 700px);
-  color: var(--heo-white);
+  font-size: 40px; /* 设置标题的字体大小 */
+  font-weight: bold; /* 设置字体加粗 */
+  max-width: 400px; /* 设置最大宽度 */
+  line-height: 1.2; /* 设置行高 */
+  margin-top: 8px; /* 设置顶部外边距 */
+  max-width: calc(100% - 700px); /* 设置最大宽度，减去700px */
+  color: var(--heo-white); /* 设置字体颜色 */
 }
 
 .special-card-left .discription {
-  font-size: 16px;
-  margin-top: 24px;
-  opacity: 0.8;
-  line-height: 1.2;
-  max-width: calc(100% - 700px);
-  color: var(--heo-white);
+  font-size: 16px; /* 设置描述文字的字体大小 */
+  margin-top: 24px; /* 设置顶部外边距 */
+  opacity: 0.8; /* 设置透明度 */
+  line-height: 1.2; /* 设置行高 */
+  max-width: calc(100% - 700px); /* 设置最大宽度，减去700px */
+  color: var(--heo-white); /* 设置字体颜色 */
 }
 
 .special-card-left .button-group {
-  position: absolute;
-  bottom: 56px;
-  display: flex;
-  align-items: center;
+  position: absolute; /* 设置为绝对定位 */
+  bottom: 56px; /* 设置底部位置 */
+  display: flex; /* 使用弹性布局 */
+  align-items: center; /* 垂直居中 */
 }
 
 .special-card-right {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  display: flex;
-  z-index: 0;
+  position: absolute; /* 设置为绝对定位 */
+  right: 0; /* 设置右侧位置 */
+  top: 0; /* 设置顶部位置 */
+  height: 100%; /* 设置高度为100% */
+  display: flex; /* 使用弹性布局 */
+  z-index: 0; /* 设置z-index */
 }
 
 .avatar-discription {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  padding: 24px 32px;
-  background: var(--heo-white);
-  margin: 0 5%;
-  border-radius: 12px;
-  line-height: 1.5;
-  max-width: 1200px;
-  margin-top: 18px;
-  border: var(--style-border-always);
-  box-shadow: var(--heo-shadow-border);
+  display: flex; /* 使用弹性布局 */
+  flex-direction: column; /* 设置为列布局 */
+  align-content: center; /* 内容居中对齐 */
+  padding: 24px 32px; /* 设置内边距 */
+  background: var(--heo-white); /* 设置背景颜色 */
+  margin: 0 5%; /* 设置外边距 */
+  border-radius: 12px; /* 设置圆角 */
+  line-height: 1.5; /* 设置行高 */
+  max-width: 1200px; /* 设置最大宽度 */
+  margin-top: 18px; /* 设置顶部外边距 */
+  border: var(--style-border-always); /* 设置边框样式 */
+  box-shadow: var(--heo-shadow-border); /* 设置阴影 */
 }
 
 .avatar-discription-text {
-  display: flex;
-  font-size: 16px;
-  text-align: center;
+  display: flex; /* 使用弹性布局 */
+  font-size: 16px; /* 设置字体大小 */
+  text-align: center; /* 设置文本居中对齐 */
 }
 
 span.avatar-name {
-  display: flex;
-  margin: auto;
-  font-size: 16px;
-  opacity: 1;
-  margin-top: 14px;
+  display: flex; /* 使用弹性布局 */
+  margin: auto; /* 水平居中 */
+  font-size: 16px; /* 设置字体大小 */
+  opacity: 1; /* 设置透明度为1 */
+  margin-top: 14px; /* 设置顶部外边距 */
 }
 
 .avatar-image {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: auto;
-  margin-top: 28px;
-  border: 4px solid white;
-  box-shadow: var(--heo-shadow-lightblack);
+  width: 60px; /* 设置宽度 */
+  height: 60px; /* 设置高度 */
+  border-radius: 50%; /* 设置圆角为50%，形成圆形 */
+  margin: auto; /* 水平居中 */
+  margin-top: 28px; /* 设置顶部外边距 */
+  border: 4px solid white; /* 设置边框 */
+  box-shadow: var(--heo-shadow-lightblack); /* 设置阴影 */
 }
 
 .avatar-title {
-  display: flex;
-  margin: auto;
-  font-size: 14px;
-  opacity: 0.6;
-  text-align: center;
+  display: flex; /* 使用弹性布局 */
+  margin: auto; /* 水平居中 */
+  font-size: 14px; /* 设置字体大小 */
+  opacity: 0.6; /* 设置透明度 */
+  text-align: center; /* 设置文本居中对齐 */
 }
 
 
 @media screen and (max-width: 1200px) {
   .group-item {
-    width: 50%;
+    width: 50%; /* 设置宽度为50% */
   }
 
   .special-card {
-    display: none;
+    display: none; /* 隐藏特殊卡片 */
   }
-
 }
 
 @media screen and (max-width: 768px) {
   .first-stack {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* 设置底部外边距 */
   }
 
   .left-Introduce {
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* 设置底部外边距 */
   }
 
   a.about-button {
-    margin-top: 40px;
+    margin-top: 40px; /* 设置顶部外边距 */
   }
   
   .group-items {
-    margin-top: 30px;
+    margin-top: 30px; /* 设置顶部外边距 */
   }
 
   body .need-padding {
-    width: 80%;
+    width: 80%; /* 设置宽度为80% */
   }
 
   .first-stack {
-    flex-direction: column;
-    margin-top: 120px;
+    flex-direction: column; /* 设置为列布局 */
+    margin-top: 120px; /* 设置顶部外边距 */
   }
 
   .product-group {
-    margin:  0px;
+    margin:  0px; /* 设置外边距为0 */
   }
   
   .group-item {
-    width: 100%;
+    width: 100%; /* 设置宽度为100% */
   }
 
   .footer {
-    flex-direction: column;
-    margin-top: 20px;
+    flex-direction: column; /* 设置为列布局 */
+    margin-top: 20px; /* 设置顶部外边距 */
   }
 
   .footer .info {
-    margin-bottom: 12px;
+    margin-bottom: 12px; /* 设置底部外边距 */
   }
 
   .show-menu .nav {
-    background: var(--heo-fontcolor);
+    background: var(--heo-fontcolor); /* 设置导航栏背景颜色 */
   }
 
   .show-menu .nav-content {
-    background: var(--heo-fontcolor);
+    background: var(--heo-fontcolor); /* 设置导航内容背景颜色 */
   }
 
   .nav-right .nav-item {
-    display: none;
+    display: none; /* 隐藏导航项 */
   }
 
   .nav-right .nav-menu {
-    display: flex;
-    color: var(--heo-white);
-    padding: 8px 0 8px 8px;
+    display: flex; /* 使用弹性布局 */
+    color: var(--heo-white); /* 设置字体颜色 */
+    padding: 8px 0 8px 8px; /* 设置内边距 */
   }
 
   .product-banner span.title {
-    font-size: 40px;
-    line-height: 46px;
+    font-size: 40px; /* 设置标题字体大小 */
+    line-height: 46px; /* 设置行高 */
   }
 
   .menu-list {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    top: 60px;
-    background: var(--heo-fontcolor);
-    width: 100%;
-    height: 0%;
-    z-index: 10;
-    align-items: center;
-    overflow: hidden;
-    transition: ease-in-out 0.3s;
-    opacity: 0;
+    display: flex; /* 使用弹性布局 */
+    position: fixed; /* 固定定位 */
+    flex-direction: column; /* 设置为列布局 */
+    top: 60px; /* 设置顶部位置 */
+    background: var(--heo-fontcolor); /* 设置背景颜色 */
+    width: 100%; /* 设置宽度为100% */
+    height: 0%; /* 设置高度为0 */
+    z-index: 10; /* 设置z-index */
+    align-items: center; /* 内容居中对齐 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+    transition: ease-in-out 0.3s; /* 设置过渡效果 */
+    opacity: 0; /* 设置透明度为0 */
   }
 
   .show-menu .menu-list {
-    height: 100%;
-    opacity: 1;
+    height: 100%; /* 设置高度为100% */
+    opacity: 1; /* 设置透明度为1 */
   }
 
   .menu-list a.nav-item {
-    padding: 8px 8px;
-    font-size: 16px;
-    border-bottom: 1px solid #ffffff53;
-    width: 90%;
-    margin-left: 0;
+    padding: 8px 8px; /* 设置内边距 */
+    font-size: 16px; /* 设置字体大小 */
+    border-bottom: 1px solid #ffffff53; /* 设置下边框 */
+    width: 90%; /* 设置宽度为90% */
+    margin-left: 0; /* 设置左边距为0 */
   }
 
   .show-menu .menu-list a.nav-item {
-    padding: 12px 8px;
+    padding: 12px 8px; /* 鼠标悬停时设置内边距 */
   }
   
   .banner-pic {
-    margin-top: 20px;
-    height: 200px;
-    bottom: 40px;
+    margin-top: 20px; /* 设置顶部外边距 */
+    height: 200px; /* 设置高度 */
+    bottom: 40px; /* 设置底部位置 */
   }
 
   .product-banner {
-    padding-top: 60px;
-    min-height: 520px;
+    padding-top: 60px; /* 设置顶部内边距 */
+    min-height: 520px; /* 设置最小高度 */
   }
+
 
   h2.group-title {
-    margin: 0;
-  }
+    margin: 0; /* 设置标题的外边距为0 */
+}
 
-  a.linkbutton {
-    margin-left: 0px;
-  }
+a.linkbutton {
+    margin-left: 0px; /* 设置链接按钮的左边距为0 */
+}
 
-  .banner-img {
-    height: 100%;
-  }
+.banner-img {
+    height: 100%; /* 设置横幅图片的高度为100% */
+}
 
-  .banner-pic-img {
-    width: 100vw;
-  }
+.banner-pic-img {
+    width: 100vw; /* 设置横幅图片的宽度为视口的100% */
+}
 
-  .nav-center {
-    display: none;
-  }
+.nav-center {
+    display: none; /* 隐藏导航中心 */
 }
 
 @media screen and (max-width: 375px) {
   .first-stack {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* 设置第一个堆叠元素的下边距为20px */
   }
 
   .left-Introduce {
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* 设置左侧介绍部分的下边距为40px */
   }
 
   a.about-button {
-    margin-top: 40px;
+    margin-top: 40px; /* 设置关于按钮的上边距为40px */
   }
-  
+
   .group-items {
-    margin-top: 30px;
+    margin-top: 30px; /* 设置组项的上边距为30px */
   }
 
   .group-item {
-    flex-direction: row;
+    flex-direction: row; /* 设置组项的排列方向为水平排列 */
   }
+
   .group-info-group {
-    margin-left: 20px;
-    flex-direction: row;
-    width: 100%;
-    height: 45px;
+    margin-left: 20px; /* 设置组信息的左边距为20px */
+    flex-direction: row; /* 设置组信息的排列方向为水平排列 */
+    width: 100%; /* 设置组信息的宽度为100% */
+    height: 45px; /* 设置组信息的高度为45px */
   }
 
   .group-info-button {
-    margin-top: 0px;
-    flex-direction: column;
+    margin-top: 0px; /* 设置组信息按钮的上边距为0 */
+    flex-direction: column; /* 设置组信息按钮的排列方向为垂直排列 */
   }
 
   span.linkbotton-tips {
-    margin-top: 4px;
+    margin-top: 4px; /* 设置链接按钮提示文本的上边距为4px */
   }
 
   .product-group {
-    margin: 0;
+    margin: 0; /* 设置产品组的外边距为0 */
   }
 
   img.group-item-icon-img,a.group-item-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
+    width: 40px; /* 设置组项图标图片的宽度为40px */
+    height: 40px; /* 设置组项图标图片的高度为40px */
+    border-radius: 12px; /* 设置组项图标图片的圆角半径为12px */
   }
 
   .product-banner {
-    padding-top: 40px;
+    padding-top: 40px; /* 设置产品横幅的上内边距为40px */
   }
 
   .banner-pic {
-    margin-top: 0px;
-    height: 150px;
+    margin-top: 0px; /* 设置横幅图片的上边距为0 */
+    height: 150px; /* 设置横幅图片的高度为150px */
   }
 
   h2.group-title {
-    margin: 0;
+    margin: 0; /* 设置标题的外边距为0 */
   }
 
   a.linkbutton {
-    margin-left: 8px;
+    margin-left: 8px; /* 设置链接按钮的左边距为8px */
   }
 
   .footer {
-    margin-top: 20px;
+    margin-top: 20px; /* 设置页脚的上边距为20px */
   }
 
   .title-group .title {
-    font-size: 35px;
-    line-height: 1.2;
+    font-size: 35px; /* 设置标题的字体大小为35px */
+    line-height: 1.2; /* 设置标题的行高为1.2 */
   }
 
   span.discription-text {
-    font-size: 16px;
-    line-height: 1.2;
+    font-size: 16px; /* 设置描述文本的字体大小为16px */
+    line-height: 1.2; /* 设置描述文本的行高为1.2 */
   }
 
   a.about-button {
-    padding: 0 24px;
+    padding: 0 24px; /* 设置关于按钮的左右内边距为24px */
   }
 
   .nav-center {
-    display: none;
+    display: none; /* 隐藏导航中心 */
   }
 }
